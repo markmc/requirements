@@ -8,9 +8,9 @@ concat() {
 
     for p in $PROJECTS; do
         cd $GIT_DIR/$p
-        #git fetch gerrit
+        git fetch gerrit
         git cat-file -p gerrit/master:$path
-    done | sed 's/#.*$//; s/ *$//; /^ *$/d' | sort | uniq
+    done | tr A-Z a-z| sed 's/#.*$//; s/ *$//; /^ *$/d' | sort | uniq
 }
 
 file_to_regexp() {
