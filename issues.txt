@@ -1,0 +1,89 @@
+
+== Max Versions ==
+
+Some projects specify a maximum version for a library. This might make
+sense where we know a project is very likely to break its API in a way
+that will impact us but, if not, let's at least try using newer versions
+as they are released.
+
+python-glanceclient>=0.5.0,<2 # cinder nova
+python-keystoneclient>=0.2,<0.3 # keystone
+python-swiftclient>=1.2,<2 # glance
+
+== Pinning ==
+
+Some projects have pinned themselves to a specific version of a library.
+This is likely to be a problem for packages because they will often have
+the latest version of the library but upstream isn't testing it:
+
+amqplib==0.6.1 # cinder quantum
+amqplib>=0.6.1 # nova
+
+kombu>=1.0.4 # nova
+kombu==1.0.4 # cinder quantum
+
+pam==0.1.4 # keystone
+
+pastedeploy # glance keystone
+pastedeploy==1.5.0 # cinder nova quantum
+
+routes==1.12.3 # cinder nova
+routes>=1.12.3 # quantum
+
+webob==1.0.8 # glance
+webob>=1.0.8 # cinder quantum
+webob==1.2.3 # nova keystone
+
+wsgiref # glance
+wsgiref==0.1.2 # cinder
+
+== Different Minimums ==
+
+Other projects have different minimum versions. The highest minimum
+effectively becomes the minimum for them all.
+
+python-keystoneclient>=0.2.0 # cinder nova glance quantum
+python-keystoneclient>=0.2,<0.3 # keystone
+
+python-quantumclient>=2.0 # quantum
+python-quantumclient>=2.1 # nova
+
+eventlet # keystone
+eventlet>=0.9.12 # glance
+eventlet>=0.9.17 # cinder nova quantum
+
+stevedore>=0.7 # nova
+stevedore>=0.8.0 # cinder
+
+== Some With Minimum ==
+
+Some projects specify a minimum version for a library while others
+don't. The specified minimum version is effectively the minium version
+for Openstack.
+
+anyjson # glance
+anyjson>=0.2.4 # cinder nova quantum
+
+greenlet # keystone
+greenlet>=0.3.1 # cinder nova glance quantum
+
+kombu # glance
+kombu>=1.0.4 # nova
+
+lxml # glance keystone
+lxml>=2.3 # cinder nova
+
+routes # glance keystone
+routes>=1.12.3 # quantum
+
+== SQLAlchemy ==
+
+SQLAlchemy is 'special':
+
+sqlalchemy>=0.7,<=0.7.9 # glance
+sqlalchemy>=0.7.3,<=0.7.9 # cinder
+sqlalchemy>=0.7.8,<=0.7.9 # nova keystone
+sqlalchemy==0.7.9 # quantum
+
+sqlalchemy-migrate>=0.7 # glance
+sqlalchemy-migrate>=0.7.2 # cinder nova keystone
