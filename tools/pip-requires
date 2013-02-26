@@ -10,7 +10,6 @@ cheetah==2.4.4
 eventlet
 eventlet>=0.9.12
 eventlet>=0.9.17
-extras
 greenlet
 greenlet>=0.3.1
 httplib2
@@ -19,7 +18,7 @@ jsonschema
 kombu
 kombu==1.0.4
 kombu>=1.0.4
-lockfile==0.8
+lockfile>=0.8
 lxml
 lxml>=2.3
 netaddr
@@ -29,11 +28,13 @@ passlib
 paste
 pastedeploy
 pastedeploy==1.5.0
+pastedeploy>=1.5.0
 pycrypto>=2.1.0alpha1
-python-cinderclient
+python-cinderclient>=1.0.1
 python-glanceclient>=0.5.0,<2
 python-keystoneclient>=0.2.0
 python-keystoneclient>=0.2,<0.3
+python-novaclient
 python-quantumclient>=2.0
 python-quantumclient>=2.1
 python-swiftclient>=1.2,<2
@@ -51,8 +52,9 @@ sqlalchemy-migrate>=0.7.2
 stevedore>=0.7
 stevedore>=0.8.0
 suds==0.4
-webob==1.0.8
-webob>=1.0.8
+suds>=0.4
+webob>=1.2
 webob==1.2.3
+websockify
 wsgiref
-wsgiref==0.1.2
+wsgiref>=0.1.2
