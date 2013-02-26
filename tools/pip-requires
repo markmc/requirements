@@ -6,7 +6,7 @@ anyjson>=0.2.4
 argparse
 babel>=0.9.6
 boto
-cheetah==2.4.4
+cheetah>=2.4.4
 eventlet
 eventlet>=0.9.12
 eventlet>=0.9.17

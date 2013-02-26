@@ -21,8 +21,6 @@ the latest version of the library but upstream isn't testing it:
 amqplib==0.6.1 # cinder quantum
 amqplib>=0.6.1 # nova
 
-cheetah==2.4.4 # nova
-
 kombu # glance
 kombu>=1.0.4 # nova
 kombu==1.0.4 # cinder quantum
