@@ -3,12 +3,14 @@
 
 Some projects specify a maximum version for a library. This might make
 sense where we know a project is very likely to break its API in a way
-that will impact us but, if not, let's at least try using newer versions
+that will impact us but, if not, let's at l2east try using newer versions
 as they are released.
 
 python-glanceclient>=0.5.0,<2 # cinder nova
 python-keystoneclient>=0.2,<0.3 # keystone
 python-swiftclient>=1.2,<2 # glance
+
+jsonschema<1 # glance
 
 == Pinning ==
 
@@ -19,23 +21,27 @@ the latest version of the library but upstream isn't testing it:
 amqplib==0.6.1 # cinder quantum
 amqplib>=0.6.1 # nova
 
+cheetah==2.4.4 # nova
+
+kombu # glance
 kombu>=1.0.4 # nova
 kombu==1.0.4 # cinder quantum
 
 pam==0.1.4 # keystone
 
 pastedeploy # glance keystone
-pastedeploy==1.5.0 # cinder nova quantum
+pastedeploy==1.5.0 # nova quantum
+pastedeploy>=1.5.0 # cinder
 
+routes # glance keystone
 routes==1.12.3 # cinder nova
 routes>=1.12.3 # quantum
 
-webob==1.0.8 # glance
-webob>=1.0.8 # cinder quantum
-webob==1.2.3 # nova keystone
+suds==0.4
+suds>=0.4
 
-wsgiref # glance
-wsgiref==0.1.2 # cinder
+webob>=1.2 # quantum glance
+webob==1.2.3 # nova keystone cinder
 
 == Different Minimums ==
 
@@ -75,6 +81,9 @@ lxml>=2.3 # cinder nova
 
 routes # glance keystone
 routes>=1.12.3 # quantum
+
+wsgiref # glance
+wsgiref>=0.1.2 # cinder
 
 == SQLAlchemy ==
 
