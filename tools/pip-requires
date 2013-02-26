@@ -43,7 +43,6 @@ python-swiftclient
 python-swiftclient>=1.2,<2
 pyudev
 routes
-routes==1.12.3
 routes>=1.12.3
 rtslib>=2.1.fb27
 setuptools_git>=0.4

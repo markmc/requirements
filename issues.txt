@@ -29,10 +29,6 @@ pastedeploy # glance keystone
 pastedeploy==1.5.0 # nova quantum
 pastedeploy>=1.5.0 # cinder
 
-routes # glance keystone
-routes==1.12.3 # cinder nova
-routes>=1.12.3 # quantum
-
 webob>=1.2 # quantum glance
 webob==1.2.3 # nova keystone cinder
 
@@ -73,7 +69,7 @@ lxml # glance keystone
 lxml>=2.3 # cinder nova
 
 routes # glance keystone
-routes>=1.12.3 # quantum
+routes>=1.12.3 # quantum nova cinder
 
 wsgiref # glance
 wsgiref>=0.1.2 # cinder
