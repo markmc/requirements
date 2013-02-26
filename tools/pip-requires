@@ -13,7 +13,6 @@ eventlet>=0.9.17
 greenlet
 greenlet>=0.3.1
 httplib2
-http://tarballs.openstack.org/oslo-config/oslo-config-2013.1b3.tar.gz
 http://tarballs.openstack.org/oslo-config/oslo-config-2013.1b4.tar.gz
 iso8601>=0.1.4
 jsonschema<1
