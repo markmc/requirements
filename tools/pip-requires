@@ -55,7 +55,6 @@ sqlalchemy-migrate>=0.7
 sqlalchemy-migrate>=0.7.2
 stevedore>=0.7
 stevedore>=0.8.0
-suds==0.4
 suds>=0.4
 webob>=1.2
 webob==1.2.3

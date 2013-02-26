@@ -33,9 +33,6 @@ routes # glance keystone
 routes==1.12.3 # cinder nova
 routes>=1.12.3 # quantum
 
-suds==0.4
-suds>=0.4
-
 webob>=1.2 # quantum glance
 webob==1.2.3 # nova keystone cinder
 
