@@ -23,7 +23,7 @@ lockfile>=0.8
 lxml
 lxml>=2.3
 netaddr
-pam==0.1.4
+pam>=0.1.4
 paramiko
 passlib
 paste
