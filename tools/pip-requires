@@ -28,7 +28,6 @@ paramiko
 passlib
 paste
 pastedeploy
-pastedeploy==1.5.0
 pastedeploy>=1.5.0
 pyasn1
 pycrypto>=2.1.0alpha1

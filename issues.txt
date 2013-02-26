@@ -25,10 +25,6 @@ kombu # glance
 kombu>=1.0.4 # nova
 kombu==1.0.4 # cinder quantum
 
-pastedeploy # glance keystone
-pastedeploy==1.5.0 # nova quantum
-pastedeploy>=1.5.0 # cinder
-
 webob>=1.2 # quantum glance
 webob==1.2.3 # nova keystone cinder
 
@@ -67,6 +63,9 @@ kombu>=1.0.4 # nova
 
 lxml # glance keystone
 lxml>=2.3 # cinder nova
+
+pastedeploy # glance keystone
+pastedeploy>=1.5.0 # cinder nova quantum
 
 routes # glance keystone
 routes>=1.12.3 # quantum nova cinder
