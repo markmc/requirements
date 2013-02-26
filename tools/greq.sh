@@ -1,8 +1,8 @@
 #!/bin/bash
 
-GIT_DIR=~/git/openstack
-REMOTE_BRANCH=gerrit/master
-PROJECTS="nova glance keystone cinder quantum"
+GIT_DIR=${GIT_DIR-~/git/openstack}
+REMOTE_BRANCH=${REMOTE_BRANCH-gerrit/master}
+PROJECTS=${PROJECTS-"nova glance keystone cinder quantum"}
 
 for p in $PROJECTS; do
     cd $GIT_DIR/$p

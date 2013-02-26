@@ -1,15 +1,17 @@
 #!/bin/bash
 
-GIT_DIR=~/git/openstack
-PROJECTS="nova glance keystone cinder quantum"
+GIT_DIR=${GIT_DIR-~/git/openstack}
+FETCH_REMOTE=${FETCH_REMOTE-}
+REMOTE_BRANCH=${REMOTE_BRANCH-gerrit/master}
+PROJECTS=${PROJECTS-"nova glance keystone cinder quantum"}
 
 concat() {
     path=$1; shift
 
     for p in $PROJECTS; do
         cd $GIT_DIR/$p
-        git fetch gerrit
-        git cat-file -p gerrit/master:$path
+        [ -n "$FETCH_REMOTE" ] && git fetch gerrit
+        git cat-file -p $REMOTE_BRANCH:$path
     done | tr A-Z a-z| sed 's/#.*$//; s/ *$//; /^ *$/d' | sort | uniq
 }
 
